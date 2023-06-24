@@ -1,0 +1,34 @@
+#To create DataFrames from numPy arrays
+import numpy as np
+import pandas as pd
+df = pd.read_csv("PastHires.csv")
+df.head()
+
+#To view last four rows of dataframe
+df.tail(4)
+
+#Dimensions of DataFrame
+df.shape
+
+#Size = rows * columns
+df.size
+
+#Length = no. of rows in dataframe
+len(df)
+
+#Column heads
+df.columns
+
+#Extracting any one column data
+df['Hired']
+
+#Extracting more than one column data
+df[['Years Experience', 'Hired']]
+
+#To sort the values
+df.sort_values(['Years Experience'])
+
+#To get a value count for given column
+degree_counts = df['Level of Education'].value_counts()
+degree_counts
+
